@@ -16,4 +16,7 @@ def initTello():
 
 def getTelloFrame(myDrone, w=360, h=240):
     myFrame = myDrone.get_frame_read().frame
-    
+    IMG = cv2.resize(myFrame,(w,h))
+    return IMG
+
+
