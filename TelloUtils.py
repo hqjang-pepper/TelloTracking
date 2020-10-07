@@ -13,3 +13,7 @@ def initTello():
     myDrone.streamoff() #이전 연결이 있을시 오류가 발생하므로 한번 stream을 끊어줘야 소켓통신이 잘 됩니다.
     myDrone.streamon()
     return myDrone
+
+def getTelloFrame(myDrone, w=360, h=240):
+    myFrame = myDrone.get_frame_read().frame
+    
